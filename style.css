@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Comic Sans MS', sans-serif, cursive;
 }
 
 body {
@@ -121,10 +121,11 @@ h1, h2 {
 }
 
 #giftBoxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-auto-rows: 150px;
   gap: 20px;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -203,4 +204,16 @@ h1, h2 {
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
+}
+
+@media (max-width: 500px) {
+  #giftBoxes {
+    grid-template-columns: repeat(3, 100px);
+    grid-auto-rows: 100px;
+  }
+
+  .gift-box {
+    width: 100px;
+    height: 100px;
+  }
 }

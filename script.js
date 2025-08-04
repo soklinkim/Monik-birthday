@@ -18,7 +18,7 @@ function checkAnswer(answer) {
     setTimeout(() => {
       showPage('page2');
       playBirthdaySong();
-    }, 3000);
+    }, 1000);
 
   } else if (answer === 'B') {
     message.textContent = 'Incorrect! Who cares about mochi? Not me at least.';
@@ -143,7 +143,7 @@ function loadGiftBoxes() {
     },
 
     {
-    label: "😈 Rick Rolled!",
+    label: "😈 You just got Rick Rolled!",
     content: {
       type: "video",
       embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
