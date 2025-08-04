@@ -1,0 +1,206 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  animation: fadeIn 1s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+button {
+  background-color: #ff80ab;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4081;
+}
+
+h1, h2 {
+  color: #ff4081;
+  margin-bottom: 20px;
+}
+
+#quizMessage {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #555;
+}
+
+.hidden {
+  display: none;
+}
+
+#cake {
+  width: 300px;
+  margin: 20px 0;
+}
+
+#cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 140px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  perspective: 1000px;
+  transition: transform 0.4s;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.card-front {
+  background-color: #ffccff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-size: cover;
+  background-position: center;
+}
+
+#giftBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gift-box {
+  width: 150px;
+  height: 150px;
+  background: url('assets/gift-box.gif') center/contain no-repeat;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.gift-box.opened {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.gift-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.gift-popup {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 10px #000;
+}
+
+.gift-popup h3 {
+  color: #ff4081;
+  margin-bottom: 1rem;
+}
+
+.gift-popup a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.gift-popup button {
+  margin-top: 1.5rem;
+  background-color: #ff80ab;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.playlist-button {
+  background-color: #ff66c4;
+  opacity: 50%;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
