@@ -147,8 +147,16 @@ function loadGiftBoxes() {
     content: {
       type: "video",
       embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+      }
+    },
+
+    {
+    label: "😈 You just got Rick Rolled!",
+    content: {
+      type: "video",
+      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+      }
     }
-}
 
   ];
 
@@ -156,7 +164,7 @@ function loadGiftBoxes() {
   remainingGifts = gifts.sort(() => Math.random() - 0.5);
 
   // Create 5 gift boxes
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     const box = document.createElement('div');
     box.classList.add('gift-box');
     box.dataset.index = i;
@@ -181,7 +189,7 @@ function openGift(boxElement, index) {
     <div class="gift-popup">
       <h3>${gift.label}</h3>
       <p>${formatGiftContent(gift.content)}</p>
-      ${openedBoxes < 5 ? '<button onclick="closeGiftPopup()">Next Gift</button>' : '<button onclick="restartPrompt()">Restart</button>'}
+      ${openedBoxes < 6 ? '<button onclick="closeGiftPopup()">Next Gift</button>' : '<button onclick="restartPrompt()">Restart</button>'}
     </div>
   `;
   document.body.appendChild(overlay);
