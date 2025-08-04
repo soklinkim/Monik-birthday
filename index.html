@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Monik!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Page 1: Quiz -->
+  <section id="page1" class="page active">
+    <h2>Quiz: What day is it today?</h2>
+    <button onclick="checkAnswer('A')">A. 8th August</button>
+    <button onclick="checkAnswer('B')">B. National Mochi Day</button>
+    <button onclick="checkAnswer('C')">C. My Birthday</button>
+    <p id="quizMessage"></p>
+  </section>
+
+  <!-- Page 2: Birthday Cake + Candle -->
+  <section id="page2" class="page">
+    <h1>🎂 Happy Birthday Monik! 🎉</h1>
+    <img src="assets/cake-with-candle.gif" alt="Birthday Cake" id="cake" />
+    <audio id="birthdaySong" src="assets/meme-happy-birthday.mp3"></audio>
+  </section>
+
+  <!-- Page 3: Matching Game -->
+  <section id="page3" class="page">
+    <h2>Match the Cards to Unlock the Gift!</h2>
+    <div id="cardGrid"></div>
+  </section>
+
+  <!-- Page 4: Gift Boxes -->
+  <section id="page4" class="page">
+    <h2>Pick Your Gifts</h2>
+    <div id="giftBoxes"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
