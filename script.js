@@ -138,23 +138,17 @@ function loadGiftBoxes() {
 
   // Define gifts (in random order)
   const gifts = [
-    { label: "❤️Birthday card from Soklin", content: "Thank you for being born, Monik. Thank you for being such a good and kind friend, but don’t be too kind or I’ll exploit you, haha. You might not know this, but sitting next to you makes my school life at IFL so much better. You make me look forward to classes I have no interest in. You make me want to do well in school again (tho I don’t really put in any effort).I’m really grateful for all the time we’ve spent together in class. Lastly, I just want to say that you’re such a pure, honest, passionate, a and very, very inspiring person, so don’t ever lose those qualities, no matter how hard life gets. And go easy on yourself too. Once again, happy 21st birthday, NikNik. I hope your dream of becoming the next Vann Molyvann comes true. Love you 😉 – Soklin" },
+    { label: "❤️Birthday card from Soklin", content: "Thank you for being born, Monik. Thank you for being such a good and kind friend, but don’t be too kind or I’ll exploit you, haha. You might not know this, but sitting next to you makes my school life at IFL so much better. You make me look forward to classes I have no interest in. You make me want to do well in school again (tho I don’t really put in any effort).I’m really grateful for all the time we’ve spent together in class. Lastly, I just want to say that you’re such a pure, honest, passionate, and a very, very inspiring person, so don’t ever lose those qualities, no matter how hard life gets. And go easy on yourself too. Once again, happy 21st birthday, NikNik. I hope your dream of becoming the next Vann Molyvann comes true. Love you 😉 – Soklin" },
     { label: "💖Birthday card from Sodavy", content: "Hello, my lovely girl!! Today is a beautiful day because it’s the day you were born. I am glad this year I get to celebrate it with you through writing you this birthday note. You have such a beautiful heart and mind. I am grateful to have known you and experienced some that kindness from you during this past time. Thanks for being good friends to everyone around you. I wish that you will have a great time celebrating this special moment with your loved ones. Another chapter of your life is unfolding. May every page of it will be filled with growth, success, love and positivity. I want you to know that I appreciate your existence, and at this point of my life wouldn’t be the same or any better if you weren’t a part of it. Happy Birthday, Muni🎉🎊🥳!! Hope you’ll have a good one!! – Sodavy" },
     { label: "💌Birthday card from Zata", content: "HAPPY BIRTHDAYYYY MONIKKKK! 🥳💖🎂literally what would i even do without u 😭 you’re the funniest, kindest, most iconic person ever and i’m so lucky to have u in my life. ur existence is a ✨gift✨ and i hope this year brings u nothing but good luck and everything ur heart desires 😝😝 (idek what i’m saying) – Zata" },
+    { label: "💌Birthday card from Nary", content: "Happy Birthday Muni🎉🎊🎁! I wish you all the best of your new year! Be healthy, and may all your wishes comes true☘️” from Nary!!" },
+    
     { 
       label: "📻 We created a song playlist for you 📻", 
       content: {
         type: "playlist",
         qr: "assets/playlist-qr.png",   // your uploaded QR image
         link: "https://open.spotify.com/playlist/5z24luFKPYXpa7ZRWZmiTO?si=HHeTfzRwRy6T_Xm0gCHAag&pi=OSiCtmRqRUS_F&pt=7a95a84bd54555abbd7d1685292e7fdf"
-      }
-    },
-
-    {
-    label: "😈 You just got Rick Rolled!",
-    content: {
-      type: "video",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
       }
     },
 
