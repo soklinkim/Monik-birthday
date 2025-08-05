@@ -9,25 +9,33 @@ function showPage(id) {
 // Quiz Logic
 function checkAnswer(answer) {
   const message = document.getElementById('quizMessage');
+  const image = document.getElementById('quizImage');
 
   if (answer === 'A') {
-    message.textContent = 'Correct! 🎉 Happy birthday Monik!';
+    message.textContent = 'Correct! Happy birthday Monik!  🎉 ';
     message.style.color = 'green';
+    image.src = 'assets/correct-cat.gif'; // Your "correct" image
+    image.style.display = 'block';
 
-    // Wait 3 seconds then go to Page 2
     setTimeout(() => {
       showPage('page2');
       playBirthdaySong();
-    }, 1000);
+    }, 1500);
 
   } else if (answer === 'B') {
-    message.textContent = 'Incorrect! Who cares about mochi? Not me at least.';
+    message.textContent = 'Incorrect! Who cares about your underwear *lying';
     message.style.color = 'red';
+    image.src = 'assets/cat_sigma.jpg'; // A silly/funny image
+    image.style.display = 'block';
+
   } else if (answer === 'C') {
-    message.textContent = 'Incorrect. Bro, not everything is about you. 😆';
+    message.textContent = 'Incorrect. Bro, not everything is about you.';
     message.style.color = 'red';
+    image.src = 'assets/huh-cat.gif'; // Another funny or sarcastic image
+    image.style.display = 'block';
   }
 }
+
 
 // Play Birthday Meme Song
 function playBirthdaySong() {
@@ -130,9 +138,9 @@ function loadGiftBoxes() {
 
   // Define gifts (in random order)
   const gifts = [
-    { label: "❤️ A birthday card from Soklin ❤️", content: "Monik, you’re amazing and inspiring. Never stop being you! – Soklin" },
-    { label: "💖 A birthday card from Sodavy 💖", content: "Wishing you endless joy and unforgettable memories today! – Sodavy" },
-    { label: "💌 A birthday card from Zata 💌", content: "May your day be filled with love and cake 🍰 – Zata" },
+    { label: "❤️Birthday card from Soklin", content: "Thank you for being born, Monik. Thank you for being such a good and kind friend, but don’t be too kind or I’ll exploit you, haha. You might not know this, but sitting next to you makes my school life at IFL so much better. You make me look forward to classes I have no interest in. You make me want to do well in school again (tho I don’t really put in any effort).I’m really grateful for all the time we’ve spent together in class. Lastly, I just want to say that you’re such a pure, honest, passionate, a and very, very inspiring person, so don’t ever lose those qualities, no matter how hard life gets. And go easy on yourself too. Once again, happy 21st birthday, NikNik. I hope your dream of becoming the next Vann Molyvann comes true. Love you 😉 – Soklin" },
+    { label: "💖Birthday card from Sodavy", content: "Hello, my lovely girl!! Today is a beautiful day because it’s the day you were born. I am glad this year I get to celebrate it with you through writing you this birthday note. You have such a beautiful heart and mind. I am grateful to have known you and experienced some that kindness from you during this past time. Thanks for being good friends to everyone around you. I wish that you will have a great time celebrating this special moment with your loved ones. Another chapter of your life is unfolding. May every page of it will be filled with growth, success, love and positivity. I want you to know that I appreciate your existence, and at this point of my life wouldn’t be the same or any better if you weren’t a part of it. Happy Birthday, Muni🎉🎊🥳!! Hope you’ll have a good one!! – Sodavy" },
+    { label: "💌Birthday card from Zata", content: "HAPPY BIRTHDAYYYY MONIKKKK! 🥳💖🎂literally what would i even do without u 😭 you’re the funniest, kindest, most iconic person ever and i’m so lucky to have u in my life. ur existence is a ✨gift✨ and i hope this year brings u nothing but good luck and everything ur heart desires 😝😝 (idek what i’m saying) – Zata" },
     { 
       label: "📻 We created a song playlist for you 📻", 
       content: {

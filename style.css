@@ -217,3 +217,13 @@ h1, h2 {
     height: 100px;
   }
 }
+
+#quizImage {
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+#quizImage[style*="block"] {
+  opacity: 1;
+}
+
