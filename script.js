@@ -20,7 +20,7 @@ function checkAnswer(answer) {
     setTimeout(() => {
       showPage('page2');
       playBirthdaySong();
-    }, 1500);
+    }, 2000);
 
   } else if (answer === 'B') {
     message.textContent = 'Incorrect! Who cares about your underwear *lying';
