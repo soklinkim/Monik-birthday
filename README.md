@@ -2,6 +2,7 @@ This project is created specifically for Monik's birthday website surprise. I us
 
 Page 1:
 Display a quiz
+
 Quiz: What day is it today?
 A.	5th August > Correct! Happy birthday, Monik (display for 3 seconds). > go to page 2
 B.	National Underwear Day > Incorrect! Who cares about your underwear? (try again button)
